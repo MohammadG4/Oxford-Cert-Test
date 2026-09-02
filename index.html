@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية أكسفورد X - طلب شهادة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --bg-darker: #06080d;
+            --accent-yellow: #f8c146;
+            --accent-cyan: #37b5d8;
+            --text-light: #f0f0f0;
+            --text-muted: #8892b0;
+            --border-color: #1f2940;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            /* Subtle starry background effect */
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 100px 100px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(6, 8, 13, 0.8);
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container img {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--accent-yellow);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a.active, .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .page-title span {
+            color: var(--accent-cyan);
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            min-height: 600px; /* Ensures iframe has room to load */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 5% 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text-light);
+        }
+
+        .footer-about p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--accent-yellow);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .designer {
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="image.png" alt="Oxford X Technology & AI Institute">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">عن الأكاديمية</a></li>
+            <li><a href="#">المسارات التدريبية</a></li>
+            <li><a href="#">بوابة الطلاب</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+            <li><a href="#" class="active">B2B Services</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1 class="page-title">إصدار <span>الشهادات</span></h1>
+        <p class="page-subtitle">يرجى تعبئة النموذج أدناه لاستخراج شهادتك المعتمدة من أكاديمية أكسفورد X</p>
+        
+        <div class="form-container">
+            <iframe
+                src="https://api.revenuelab360.com/widget/form/wNSn4Vzmw5GojTIq1QTM"
+                style="width:100%;height:100%;border:none;border-radius:8px"
+                id="inline-wNSn4Vzmw5GojTIq1QTM" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Mohammad_CERT_LEVEL#"
+                data-height="undefined"
+                data-layout-iframe-id="inline-wNSn4Vzmw5GojTIq1QTM"
+                data-form-id="wNSn4Vzmw5GojTIq1QTM"
+                data-cookie-consent="true"
+                data-cookie-consent-provider="auto"
+                title="Mohammad_CERT_LEVEL#">
+            </iframe>
+            <script src="https://api.revenuelab360.com/js/form_embed.js"></script>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>قانوني وتواصل</h3>
+                <ul>
+                    <li><a href="#">تواصل معنا</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>الروابط السريعة</h3>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">المسارات التدريبية</a></li>
+                    <li><a href="#">عن الأكاديمية</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-about">
+                <h3>أكاديمية أكسفورد X</h3>
+                <p>البوابة الرقمية الأولى للتعليم والتدريب على المهارات المطلوبة. نصنع كفاءات قادرة على قيادة المستقبل التقني والمهني في أسرع وقت ممكن.</p>
+                <img src="image.png" alt="Oxford X Technology & AI Institute" style="height: 60px;">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2026 جميع الحقوق محفوظة — أكاديمية أكسفورد</div>
+            <div class="designer">DESIGNED BY REVENUELAB360</div>
+        </div>
+    </footer>
+
+</body>
+</html>
